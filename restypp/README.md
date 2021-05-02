@@ -3,7 +3,7 @@
  
  # links 
  [deployed link](https://restyapp.netlify.app/)
- [Repo Link](https://github.com/Fatensamman/resty)
+ [Repo Link](https://github.com/Fatensamman/resty/tree/main/restypp)
  [PR link](https://github.com/Fatensamman/resty/pull/1)
 
  # Documentation
