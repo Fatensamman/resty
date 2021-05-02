@@ -1,0 +1,37 @@
+main{
+    
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    form{
+        margin-top: 20px;
+       input{
+           margin-bottom: 20px;
+       }
+        .methodLabel{
+        margin-left: 20px;
+        box-sizing: border-box;
+        padding: 5px;
+        background-color: rgb(190, 190, 190);
+        cursor: pointer;
+        }
+        .methodLabel:hover{
+            background-color: rgb(39, 39, 39);
+            color:white;
+        }
+    }
+    div{
+        box-sizing: border-box;
+        background-color: rgb(233, 231, 231);
+        border:1px solid rgb(126, 126, 126);
+        height:500px;
+        width: 100%;
+       
+        h3{
+            text-align: left;
+            float: left;
+        }
+    }
+}
