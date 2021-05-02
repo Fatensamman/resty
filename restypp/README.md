@@ -2,9 +2,9 @@
 -  Begin work on the RESTy API application
  
  # links 
- [deployed link]()
- [Repo Link]()
- [PR link]()
+ [deployed link](https://restyapp.netlify.app/)
+ [Repo Link](https://github.com/Fatensamman/resty)
+ [PR link](https://github.com/Fatensamman/resty/pull/1)
 
  # Documentation
  ## UML Diagram
