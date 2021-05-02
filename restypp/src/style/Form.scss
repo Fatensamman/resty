@@ -11,9 +11,9 @@ main{
            margin-bottom: 20px;
        }
         .methodLabel{
-        margin-left: 20px;
+        // margin-left: 20px;
         box-sizing: border-box;
-        padding: 5px;
+        padding: 10px 13px;
         background-color: rgb(190, 190, 190);
         cursor: pointer;
         }
@@ -26,10 +26,12 @@ main{
         box-sizing: border-box;
         background-color: rgb(233, 231, 231);
         border:1px solid rgb(126, 126, 126);
-        height:500px;
+        height:450px;
         width: 100%;
        
         h3{
+            margin-left: 10px;
+            margin-top: 10px;
             font-size: 15px;
             text-align: left;
             float: left;

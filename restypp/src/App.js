@@ -17,7 +17,6 @@ constructor(props){
   this.state ={ 
     url:'',
     method:'',
-    flag:false
   };
 }
 handlewritten = (e)=>{
