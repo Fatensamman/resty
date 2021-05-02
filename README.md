@@ -2,10 +2,9 @@
 -  Begin work on the RESTy API application
  
  # links 
- [deployed link on Netlify](https://resty-app-401.netlify.app/)
- [deployed link on Heroku](https://resty-app-faten.herokuapp.com/)
- [Repo Link](https://github.com/Fatensamman/resty/tree/main/restypp)
- [PR link](https://github.com/Fatensamman/resty/pull/1)
+ 1. [deployed link on Netlify](https://resty-app-401.netlify.app/)
+ 2. [deployed link on Heroku](https://resty-app-faten.herokuapp.com/)
+ 3. [PR link](https://github.com/Fatensamman/resty/pull/1)
 
  # Documentation
  ## UML Diagram
