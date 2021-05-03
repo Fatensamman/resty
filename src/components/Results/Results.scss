@@ -1,0 +1,21 @@
+.content{
+    
+    display: absolute;
+    top: 110px;
+    // width: 90%;
+    box-sizing: border-box;
+        background-color: rgb(233, 231, 231);
+        border:1px solid rgb(126, 126, 126);
+        overflow: scroll;
+        margin-left: 140px;
+        height:400px;
+        width: 80%;
+        h2,h4{
+            margin-left: 20px;
+            margin-top: 20px;
+            // font-size: 15px;
+            text-align: left;
+            // float: left;
+        }
+    // }
+}
