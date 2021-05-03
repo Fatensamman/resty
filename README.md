@@ -12,7 +12,7 @@
  ![image](./public/appuml.png)
 
  # LAB  Props and State
- [PR link](https://github.com/Fatensamman/resty/pull/1)
+ [PR link](https://github.com/Fatensamman/resty/pull/9)
 
  ## UML Diagram
  ![image](./public/appuml2.png)
