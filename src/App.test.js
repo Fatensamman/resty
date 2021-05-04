@@ -11,7 +11,7 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('dynamically updates number', async () =>{
+test('test the renderd data', async () =>{
   const count = 82;
   const results = { 
     "name": "Luke Skywalker",
