@@ -17,8 +17,7 @@ class Form extends React.Component {
       let headers ={};
       // console.log(raw.headers);
       raw.headers.forEach((item,key)=>{
-        console.log(item,key);
-        return headers.key=item});
+        return headers[key]=item});
       this.props.handleClick(headers,data.count,data.results)
       
     } catch (error) {
