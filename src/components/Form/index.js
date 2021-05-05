@@ -46,24 +46,24 @@ class Form extends React.Component {
            <div className="new">
           <div className="btn-click">
           <label className="methodLabel">Get
-          <input type="radio" name="method" className="method" value="Get" />
+          <input type="radio" name="method" className="method" value="Get" checked={this.props.api.method==='Get'} />
           </label>
           </div>
           <div className="btn-click">
           <label className="methodLabel">Post
-          <input type="radio" name="method" className="method" value="Post" />
+          <input type="radio" name="method" className="method" value="Post" checked={this.props.api.method==='Post'}/>
           </label>
           </div>
           
           <div className="btn-click">
           <label className="methodLabel">Put
-          <input type="radio" name="method" className="method" value="Put" />
+          <input type="radio" name="method" className="method" value="Put" checked={this.props.api.method==='Put'}/>
           </label>
           </div>
 
           <div className="btn-click">
           <label className="methodLabel">Delete
-          <input type="radio" name="method" className="method" value="Delete" />
+          <input type="radio" name="method" className="method" value="Delete" checked={this.props.api.method==='Delete'}/>
           </label>
           </div>
           </div>
