@@ -10,75 +10,116 @@ import History from './components/History';
 
 
 class App extends Component {
+
   constructor(props) {
     super(props)
+
     this.state = {
+      headers: {},
       urls: [],
       methods: [],
-      headers: {},
-      count: 0,
       history: [],
       isLoading: false,
-      isDataVisible: false,
+      isVisible: false,
       error: '',
       body: [],
       callback: { url: '', method: '' },
     }
   }
-  callback=(api)=> {
+
+  callback = (api) => {
     this.setState({ callback: api });
   }
+
   toggleMenu = () => {
-    this.setState({ isDataVisible: !this.state.isDataVisible });
+    this.setState({ isVisible: !this.state.isVisible });
   }
+
   updateResults = async (data) => {
-    // console.log(data);
-    try {
       this.setState({
         urls: [...this.state.urls, data.url],
         methods: [...this.state.methods, data.method],
         isLoading: true,
-      });
-      const request = await fetch(data.url, {
-        method: data.method,
-      });
+      }); 
 
-      const response = await request.json();
-      if (response) {
-        this.toggleMenu();
+      let body1 = data.body;
+      let body2 ;
+      let body3 ;
+
+      if(data.method === 'Get'){
+         body3 = null ;
+         
+      } else {
+        if (body1.length === 0){
+          body3 = null ;
+          } else{
+        body2 = JSON.parse(body1)
+        body3 = JSON.stringify(body2);}
       }
-    
-      let dataInstance = {
-        url: data.url,
+      let request;
+      
+  try{
+       request = await fetch(data.url,{
         method: data.method,
-        body: response,
-      };
-
-      let updateHistory = [...this.state.history, dataInstance];
-      localStorage.setItem('History', JSON.stringify(updateHistory));
-      await this.setState({
-        body: [...this.state.body, response],
-        isLoading: false,
-        history: updateHistory,
-      });
-    } catch (error) {
-      if (error) {
-        this.setState({
-          error: error,
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+  
+        body: body3
+  
+      })
+    } catch(error){
+        await this.setState({
+          body: [...this.state.body, 'url not found'],
+          isLoading: false,
+          isVisible:true
         });
       }
-      console.log(error);
-    }
-  }
+        
+        if(request){
+        this.toggleMenu();
+        let response = await request.json();
+        console.log(response);
+  
+        let data2 = {
+          method: data.method,
+          url: data.url,
+          body: response,
+        };
+        let arr = this.state.history.map(element => {
+          return element.url + element.method;
+        })
+  
+        let update;
+    
+        if (arr.includes(data2.url + data2.method)) {
+             update = this.state.history
+        } else {
+          update = [...this.state.history, data2];
+          localStorage.setItem('h1', JSON.stringify(update));
+        }
+  
+  
+        await this.setState({
+          body: [...this.state.body, response],
+          isLoading: false,
+          isVisible: true,
+          history: update,
+        });
+      }
+    } 
+  
+
   componentDidMount() {
-    let history = JSON.parse(localStorage.getItem('History')) || [];
+    let history = JSON.parse(localStorage.getItem('h1')) || [];
     this.setState({ history });
   }
-  // -----------------------------------------------------
-  // clickHandler = (headers,count,results)=>{
-  //   this.setState({headers,count,results})
-  // }
-  // -----------------------------------------------------
+
   render() {
     return (
       <div className="Resty">
@@ -88,10 +129,10 @@ class App extends Component {
           <History history={this.state.history} callback={this.callback} />
           <If condition={this.state.isLoading}>
             <Then>
-              <p>Loading...</p>
+              <p>Loading ...</p>
             </Then>
             <Else>
-              <Results show={this.state.isDataVisible} data={this.state} />
+              <Results show ={this.state.isVisible} data={this.state}  />
             </Else>
           </If>
         </main>

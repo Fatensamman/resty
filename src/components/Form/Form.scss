@@ -1,58 +1,58 @@
-.form-div{
-    margin-top: 90px;
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    justify-items: center;
-    align-items: center;
-    height:auto;
-    width :100%;
-    form{
-        margin-top: 20px;
-       .url{
-           margin-bottom: 20px;
-        font-size:15px;
-       }
-       #body{
-         margin-top:10px
-       }
-      //  br{
-      //   height: 5px;
-      //  }
-       .btn-click{
-        display: inline-block;
-        margin: 4px;
-        width: 75px;
-        background-color:#CCCCCC;
-        border-radius: 4px;
-        border: 1px solid #D0D0D0;
-        overflow: auto;
-        .methodLabel{
-        width:4.0em;
-         .method{
-            position: absolute;
-            top: -20px;
-           }
-         }
-       }
-      }
+// .form-div{
+//     margin-top: 90px;
+//     display: grid;
+//     grid-template-rows: 1fr;
+//     justify-items: center;
+//     align-items: center;
+//     height:auto;
+//     width :100%;
+//     form{
+//         margin-top: 20px;
+//        .url{
+//            margin-bottom: 20px;
+//         font-size:15px;
+//        }
+//        #body{
+//          margin-top:10px
+//        }
+//       //  br{
+//       //   height: 5px;
+//       //  }
+//        .btn-click{
+//         display: inline-block;
+//         margin: 4px;
+//         width: 75px;
+//         background-color:#CCCCCC;
+//         border-radius: 4px;
+//         border: 1px solid #D0D0D0;
+//         overflow: auto;
+//         .methodLabel{
+//         width:4.0em;
+//          .method{
+//             position: absolute;
+//             top: -20px;
+//            }
+//          }
+//        }
+//       }
 
-       .btn-click input:checked{
-        background-color: #FFFFFF;
-       }
-    // div{
-    //     box-sizing: border-box;
-    //     // margin-left: 40px;
-    //     background-color: rgb(233, 231, 231);
-    //     border:1px solid rgb(126, 126, 126);
-    //     // height:450px;
-    //     width: 80%;
+//        .btn-click input:checked{
+//         background-color: #FFFFFF;
+//        }
+//     // div{
+//     //     box-sizing: border-box;
+//     //     // margin-left: 40px;
+//     //     background-color: rgb(233, 231, 231);
+//     //     border:1px solid rgb(126, 126, 126);
+//     //     // height:450px;
+//     //     width: 80%;
        
-    //     h3{
-    //         margin-left: 10px;
-    //         margin-top: 10px;
-    //         font-size: 15px;
-    //         text-align: left;
-    //         float: left;
-    //     }
-    // }
-}
+//     //     h3{
+//     //         margin-left: 10px;
+//     //         margin-top: 10px;
+//     //         font-size: 15px;
+//     //         text-align: left;
+//     //         float: left;
+//     //     }
+//     // }
+// }
