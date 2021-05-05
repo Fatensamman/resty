@@ -9,17 +9,16 @@
  # links 
  [PR link](https://github.com/Fatensamman/resty/pull/1)
 
- # Documentation
- ## UML Diagram
- ![image](./public/appuml.png)
-
  # LAB - Props and State
  [PR link](https://github.com/Fatensamman/resty/pull/9)
 
+
+# LAB - Compositions
+[PR link](https://github.com/Fatensamman/resty/pull/10)
+
  ## UML Diagram
  ![image](./public/appuml2.png)
-
-
+ 
 # Getting Started with Create React App
 
 
