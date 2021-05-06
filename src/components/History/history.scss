@@ -1,0 +1,19 @@
+.homehistorydiv{
+    h2{
+        margin-left: 20px;
+    }
+    margin-top:-200px;
+    margin-left: 50px;
+    box-sizing: border-box;
+    border:1px solid black;
+    height:auto;
+    width:300px;
+    display:inline-block;
+    div{
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    div:hover{
+     color:green;
+    }
+}
