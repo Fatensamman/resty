@@ -8,7 +8,7 @@ const Header = ()=>{
 
        <h1>RESTy</h1>
       </div>
-       <nav>
+       {/* <nav>
         <ul>
           <li>
             <NavLink exact to="/">
@@ -26,7 +26,7 @@ const Header = ()=>{
              </NavLink>
           </li>
         </ul>
-      </nav>
+      </nav> */}
      </header>
     ) 
    }
