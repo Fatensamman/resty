@@ -22,12 +22,12 @@ class Home extends Component {
       isVisible: false,
       error: '',
       body: [],
-      callback: { url: '', method: '' },
+      refill: { url: this.props.location.data?.url, method: this.props.location.data?.method },
     }
   }
 
-  callback = (api) => {
-    this.setState({ callback: api });
+  refill = (data) => {
+    this.setState({ refill: data });
   }
 
   toggleMenu = () => {
@@ -83,7 +83,7 @@ class Home extends Component {
         if(request){
         this.toggleMenu();
         let response = await request.json();
-        console.log(response);
+        // console.log(response);
   
         let data2 = {
           method: data.method,
@@ -119,17 +119,19 @@ class Home extends Component {
     this.setState({ history });
   }
  
-  reRunHandler=(data)=>{
-    this.setState({locationMethod:data.method,
-    locationUrl: data.url})
-    
-  }
+  // refillAgain=()=>{
+  //   let [url,method]=this.props.location.data
+  //   if(this.props.location.data){
+  //     this.setState({ refill: {url,method} })
+  //   }
+  // }
   render() {
+    // console.log(';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;');
     return (
       <div>
           <>
-        <Form updateResults={this.updateResults} api={this.state.callback} />
-          <History history={this.state.history} callback={this.callback} />
+        <Form updateResults={this.updateResults} api={this.state.refill}/>
+          <History history={this.state.history} refill={this.refill} />
           <If condition={this.state.isLoading}>
             <Then>
               <p>Loading ...</p>
