@@ -1,12 +1,15 @@
 
 import { Component } from 'react';
 import { If, Then, Else } from 'react-if';
+import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
 import Form from './components/Form';
 import Footer from './components/Footer';
 import Results from './components/Results';
 import History from './components/History';
+import HistoryPage from './components/historyPage';
+import Help from './components/help';
 
 
 class App extends Component {
@@ -119,13 +122,21 @@ class App extends Component {
     let history = JSON.parse(localStorage.getItem('h1')) || [];
     this.setState({ history });
   }
-
+ 
+  reRunHandler=(data)=>{
+    this.setState({locationMethod:data.method,
+    locationUrl: data.url})
+    
+  }
   render() {
+    // console.log(this.state);
     return (
       <div className="Resty">
         <Header />
+        <Switch>
+        <Route exact path="/">
+          <>
         <Form updateResults={this.updateResults} api={this.state.callback} />
-        <main>
           <History history={this.state.history} callback={this.callback} />
           <If condition={this.state.isLoading}>
             <Then>
@@ -135,8 +146,12 @@ class App extends Component {
               <Results show ={this.state.isVisible} data={this.state}  />
             </Else>
           </If>
-        </main>
-        <Footer />
+          </>
+          </Route>
+          <Route path="/history" component={()=><HistoryPage callback={this.callback}/>}/>
+          <Route path="/help" component={Help}/>
+        </Switch>
+        <Footer/>
       </div>
     );
   }

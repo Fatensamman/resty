@@ -2,7 +2,7 @@ import './Results.scss';
 import ReactJson from 'react-json-view';
 
 function Results(props) {
-    console.log('0000000000000000000000',props);
+    // console.log('0000000000000000000000',props);
     return (
         <div>
             { props.show ? <div id="content" className="content">
