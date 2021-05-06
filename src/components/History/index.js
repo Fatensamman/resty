@@ -20,14 +20,16 @@ export default function History(props) {
         })}
       </Then>
     </If>
-      {/* <ul>
-        {props.history.map((item, index) =>
-          <li key={index}>
-            <span className={`method ${item.method}`}>{`${item.method}`}</span>
-            <button className='url-history'>{`${item.url}`}</button>
-          </li>,
-        )}
-      </ul> */}
     </>
   );
 }
+
+
+{/* <ul>
+  {props.history.map((item, index) =>
+    <li key={index}>
+      <span className={`method ${item.method}`}>{`${item.method}`}</span>
+      <button className='url-history'>{`${item.url}`}</button>
+    </li>,
+  )}
+</ul> */}
