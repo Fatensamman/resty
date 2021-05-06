@@ -21,7 +21,7 @@ class HistoryPage extends React.Component {
         let url = data.url
         this.setState({ body: data.body, isVisible: true})
         // this.props.reRunHandle({...this.state })
-        // this.props.callback({ method, url });
+        this.props.callback({ method, url });
     };
     
     render() {
@@ -40,6 +40,7 @@ class HistoryPage extends React.Component {
                                     {data.method} {data.url}
                                     <NavLink to={{
                                         pathname: '/',
+                                       
                                     }}>
                                         Re-Run
                                       </NavLink>

@@ -4,7 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Header = ()=>{
     return(
     <header>
+      <div>
+
        <h1>RESTy</h1>
+      </div>
        <nav>
         <ul>
           <li>
