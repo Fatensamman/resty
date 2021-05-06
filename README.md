@@ -1,20 +1,10 @@
 # RESTy app :
-1. [deployed link on Netlify](https://resty-app-401.netlify.app/)
-2. [deployed link on Heroku](https://resty-app-faten.herokuapp.com/)
+1. [deployed link on Netlify](https://resty-app-28.netlify.app/)
+2. [deployed link on Heroku](https://resty-app-28.herokuapp.com/)
 
-
-# LAB - Component Based UI
--  Begin work on the RESTy API application
  
- # links 
- [PR link](https://github.com/Fatensamman/resty/pull/1)
-
- # LAB - Props and State
- [PR link](https://github.com/Fatensamman/resty/pull/9)
-
-
-# LAB - Compositions
-[PR link](https://github.com/Fatensamman/resty/pull/10)
+ # LAB - Compositions
+[PR link](https://github.com/Fatensamman/resty/pull/15)
 
  ## UML Diagram
  ![image](./public/appuml2.png)
