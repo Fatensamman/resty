@@ -18,27 +18,23 @@ class Form extends React.Component {
     });
     this.props.updateResults({ ...this.state });
   }
-  handleClick = (e) => {
+  handleClick = async (e) => {
     if (this.props.api.method) {
-      document.querySelector(`input[value=${this.props.api.method}]`).click()
+      await document.querySelector(`input[value=${this.props.api.method}]`).click()
+      console.log(document.querySelector(`input[value=${this.props.api.method}]`));
     };
   }
-  // urlHandle = e => {
-    //   const url = e.target.value;
-    //   this.setState({ url })
-    // }
-  // handleMethod = (e) => {
-  //   const method = e.target.value;
-  //   this.setState({ method })
 
-  //   }
   render() {
+    console.log(';;;;;;;;;;;;', this.props.api)
     return (
       <div className="form-div">
+
+
         <form onSubmit={this.handleSubmit}>
           <div className="ll">
-            <label>URL: </label>
-            <input type="url" name="url" className="url" placeholder="Enter request URL" defaultValue={this.props.api.url} />
+            <label >URL: </label>
+            <input type="url" name="url" className="url" key={this.props.api.url} placeholder="Enter request URL" defaultValue={this.props.api.url} />
             <input type="submit" value="Go!" />
           </div>
           <textarea type="text"
@@ -47,37 +43,35 @@ class Form extends React.Component {
             placeholder="Request body..."
             rows="4"
             cols="50"></textarea>
-          {/* <br /> */}
           <div className="new">
             <div className="btn-click">
               <label className="methodLabel">Get
-          <input type="radio" name="method" className="method" value="Get" ref={this.handleClick()} />
+          <input type="radio" name="method" className="method" value="Get" key={this.props.api.method} defaultChecked={this.props.api.method === "Get"} />
               </label>
             </div>
             <div className="btn-click">
               <label className="methodLabel">Post
-          <input type="radio" name="method" className="method" value="Post" ref={this.handleClick()} />
+          <input type="radio" name="method" className="method" value="Post" key={this.props.api.method} defaultChecked={this.props.api.method === "Post"} />
               </label>
             </div>
 
             <div className="btn-click">
               <label className="methodLabel">Put
-          <input type="radio" name="method" className="method" value="Put" ref={this.handleClick()} />
+          <input type="radio" name="method" className="method" value="Put" key={this.props.api.method} defaultChecked={this.props.api.method === "Put"} />
               </label>
             </div>
 
             <div className="btn-click">
               <label className="methodLabel">Delete
-          <input type="radio" name="method" className="method" value="Delete" ref={this.handleClick()} />
+          <input type="radio" name="method" className="method" value="Delete" key={this.props.api.method} defaultChecked={this.props.api.method === "Delete"} />
               </label>
             </div>
           </div>
         </form>
-        {/* <div>
-          <h3>{this.state.method}&nbsp; &nbsp; &nbsp;{this.state.url}</h3>
-        </div> */}
       </div>
     )
+
   }
+
 }
 export default Form;

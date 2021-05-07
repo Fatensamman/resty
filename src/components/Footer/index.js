@@ -1,10 +1,10 @@
 import './Footer.scss'
 
-const Footer = ()=>{
-    return(
+const Footer = () => {
+  return (
     <footer>
-       <h3>&copy;2020 Code fellows</h3>
-     </footer>
-    ) 
-   }
- export default Footer;
+      <h4>&copy;2020 Code fellows</h4>
+    </footer>
+  )
+}
+export default Footer;
