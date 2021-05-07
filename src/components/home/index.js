@@ -128,7 +128,7 @@ class Home extends Component {
           <History history={this.state.history} refill={this.refill} />
           <If condition={this.state.isLoading}>
             <Then>
-              <p>Loading</p>
+              <p className="phome">Loading</p>
               <img src="https://icons8.com/preloaders/preloaders/373/Golf%20ball-128.gif" alt="loading"/>
             </Then>
             <Else>
