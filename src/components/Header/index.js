@@ -1,14 +1,14 @@
 import './Header.scss'
 import { NavLink } from 'react-router-dom';
 
-const Header = ()=>{
-    return(
+const Header = () => {
+  return (
     <header>
       <div>
 
-       <h1>RESTy</h1>
+        <h1>RESTy</h1>
       </div>
-       <nav>
+      <nav>
         <ul>
           <li>
             <NavLink exact to="/">
@@ -17,18 +17,18 @@ const Header = ()=>{
           </li>
           <li>
             <NavLink to="/history">
-            History
+              History
              </NavLink>
           </li>
           <li>
             <NavLink to="/help">
-            Help
+              Help
              </NavLink>
           </li>
         </ul>
       </nav>
-     </header>
-    ) 
-   }
+    </header>
+  )
+}
 
- export default Header;
+export default Header;

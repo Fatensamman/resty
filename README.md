@@ -3,18 +3,13 @@
 2. [deployed link on Heroku](https://resty-app-faten.herokuapp.com/)
 
 
-# LAB - Component Based UI
--  Begin work on the RESTy API application
- 
- # links 
- [PR link](https://github.com/Fatensamman/resty/pull/1)
+# Phase1 - Component Based UI
 
- # LAB - Props and State
- [PR link](https://github.com/Fatensamman/resty/pull/9)
+ # Phase2 Props and State
 
+# Phase3 Compositions
 
-# LAB - Compositions
-[PR link](https://github.com/Fatensamman/resty/pull/10)
+# Phase4 Routing 
 
  ## UML Diagram
  ![image](./public/appuml2.png)
