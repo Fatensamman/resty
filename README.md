@@ -3,13 +3,13 @@
 2. [deployed link on Heroku](https://resty-app-faten.herokuapp.com/)
 
 
-# Phase1 - Component Based UI
+### Phase1 - Component Based UI
 
- # Phase2 Props and State
+ ### Phase2 Props and State
 
-# Phase3 Compositions
+### Phase3 Compositions
 
-# Phase4 Routing 
+### Phase4 Routing 
 
  ## UML Diagram
  ![image](./public/appuml2.png)
